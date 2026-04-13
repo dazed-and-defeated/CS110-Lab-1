@@ -1,0 +1,18 @@
+.submain {
+  margin: 100px 0;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  overflow: visible;
+  display: none;
+}
+
+.villain {
+  filter: drop-shadow(0 0 10px rgb(103, 103, 103));
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.song-text {
+  color: white;
+  margin: 20px 0;
+}

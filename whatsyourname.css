@@ -1,0 +1,97 @@
+.entername {
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-image: black;
+  color: white;
+  font-family: OCR A Std, monospace;
+  font-size: 50px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+}
+
+.shaky {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.space {
+  padding: 0px 10px 0px 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+input[type="text"] {
+    font-size: 30px;
+    font-family: OCR A Std, monospace;
+}
+
+@keyframes shake-one {
+  0% {transform: translate(0, 0px);}
+  33% {transform: translate(-2.5px, 1px);}
+  66% {transform: translate(-1px, 2.5px);}
+}
+
+@keyframes shake-two {
+  0% {transform: translate(0, 2.5px);}
+  33% {transform: translate(1px, 1px);}
+  66% {transform: translate(-1px, 0px);}
+  100% {transform: translate(0, 2.5px);}
+}
+
+@keyframes shake-three {
+  0% {transform: translate(-1px, 0px);}
+  33% {transform: translate(0px, 1.5px);}
+  66% {transform: translate(2.5px, 1px);}
+  100% {transform: translate(-1px, 0px);}
+}
+
+@keyframes blank{
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fade-out {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@media(max-width: 600px)
+{
+  .shaky {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-animation {
+    animation: fade-in 2s;
+  }
+  .fade-out-animation {
+    animation: fade-out 2s;
+  }
+
+  .one {
+    animation: shake-one 0.5s infinite;
+  }
+
+  .two {
+    animation: shake-two 0.5s infinite;
+  }
+
+  .three {
+    animation: shake-three 0.5s infinite;
+  }
+
+  .three-sec-timer {
+    animation: blank 3s;
+  }
+}

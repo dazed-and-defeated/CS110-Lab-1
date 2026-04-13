@@ -1,0 +1,132 @@
+.main {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgb(225, 177, 144), rgb(225, 177, 144), rgb(225, 177, 144), rgb(212, 141, 93),
+                                    rgb(115, 198, 151), rgb(115, 198, 151), rgb(4, 37, 18));
+  color: rgb(0, 0, 0);
+  overflow: visible;
+}
+
+.small-image {
+  transform: translate(0, -10%);
+  position: absolute;
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+}
+
+.img-left {
+  left: 15%;
+}
+
+.img-right {
+  right: 15%;
+}
+
+h2 {
+  margin: 10px;
+}
+
+p {
+  margin: 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+.border-left {
+  background-size: 216px 348px;
+  top: 0;
+  bottom: 0;
+  width: 108px;
+  position: absolute;
+  background-image: url("");
+}
+
+.panel {
+  filter: drop-shadow(0 5px 0.5rem rgb(165, 35, 9));
+  background-color: rgb(230, 204, 188);
+  border: 1.5px solid rgba(184, 53, 6, 0.5);
+  max-width: 800px;
+  padding: 25px;
+  margin: 30px 30%;
+  display: flex;
+  border-radius:20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  flex-direction: column;
+}
+
+.character-panel {
+  filter: drop-shadow(1px 1.5px 0.1rem rgb(0, 0, 0));
+  background-color: rgba(230, 204, 188, 0.3);
+  border-radius:20px;
+  margin: 20px 0px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-wrap: balance;
+  flex-direction: column;
+  min-inline-size: 100px;
+  max-inline-size: 850px;
+}
+
+.right {
+  margin-left: 30%;
+}
+
+.left {
+  margin-right: 30%;
+}
+
+.big-margin {
+  margin: 100px 0px;
+}
+
+.test {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  font-size: 100%;
+}
+
+@keyframes grow {
+  0% { transform: scale(1, 1); overflow-y: hidden;}
+  50% {transform: scale(100, 100) translate(0, -10%); color: black; background-color: black;}
+  100% {transform: scale(1000, 1000); color: black; background-color: black; overflow-y: auto;}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .test-animation {
+    animation: grow 3s;
+  }
+}
+
+@media(max-width: 1070px) {
+  .img-left {
+    left: 0%;
+  }
+  
+  .img-right {
+    right: 0%;
+  }
+}
